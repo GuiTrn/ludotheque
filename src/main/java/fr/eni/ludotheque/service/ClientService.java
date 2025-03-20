@@ -17,4 +17,10 @@ public class ClientService {
     public List<Client> getAllClients() {
         return clientRepository.findAll();
     }
+
+    // Créer un client avec une adresse
+    public Client saveClient(Client client) {
+        return clientRepository.save(client);
+    }
+
 }
