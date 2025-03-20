@@ -13,7 +13,7 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-    // Récupérer tous les clients
+    // Récupérer tous les clients avec leurs adresses
     public List<Client> getAllClients() {
         return clientRepository.findAll();
     }

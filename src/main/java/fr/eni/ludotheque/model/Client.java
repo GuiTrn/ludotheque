@@ -27,4 +27,8 @@ public class Client {
 
     @Column(nullable = false)
     private String telephone;
+
+    @OneToOne(cascade = CascadeType.ALL) // Relation OneToOne
+    @JoinColumn(name = "adresse_id", referencedColumnName = "id")
+    private Adresse adresse;
 }

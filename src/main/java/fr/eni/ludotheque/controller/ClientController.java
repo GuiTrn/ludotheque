@@ -16,7 +16,7 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
 
-    // Récupération de TOUS les clients
+    // Récupération de TOUS les clients avec leurs adresses
     @GetMapping
     public List<Client> getClients() {
         return clientService.getAllClients();
