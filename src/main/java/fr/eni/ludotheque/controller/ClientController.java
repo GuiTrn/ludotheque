@@ -19,4 +19,11 @@ public class ClientController {
     public List<Client> getAllClients() {
         return clientService.getAllClients();
     }
+
+    // Créer un client avec une adresse
+    @PostMapping("/create")
+    public Client createClient(@RequestBody Client client) {
+        return clientService.saveClient(client);
+    }
+
 }
