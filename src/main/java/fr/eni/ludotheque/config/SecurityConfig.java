@@ -13,7 +13,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // Désactive la protection CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/clients/**").permitAll() // Autorise l'accès sans authentification
+                        .requestMatchers("/clients/**", "/jeux/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form.disable()) // Désactive le formulaire de login par défaut
