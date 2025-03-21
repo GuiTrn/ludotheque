@@ -20,6 +20,12 @@ public class Client {
     private String email;
 
     @Column(nullable = false)
+    private String password;
+
+    @Column(nullable = false)
+    private int role = 0;
+
+    @Column(nullable = false)
     private String nom;
 
     @Column(nullable = false)
